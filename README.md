@@ -1,1 +1,3 @@
-# lab-estad-general
+# Laboratorio de Estadística General
+# Dr. Byron González
+# http://cete.fausac.gt
