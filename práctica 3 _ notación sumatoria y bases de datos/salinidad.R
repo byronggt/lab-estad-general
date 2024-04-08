@@ -6,6 +6,7 @@
 
 # Colocar en memoria las bibliotecas a usar
 if(!require(readxl)){install.packages("readxl")}
+if(!require(fBasics)){install.packages("fBasics")}
 
 # Abrir la base de datos
 # No olvidar el cambio de directorio de trabajo
@@ -24,6 +25,12 @@ var(mg)
 # Promedio de potasio
 mean(k)
 
+# Resumen de los cinco números para todas las variables
+summary(salinidad)
 
+# Cálculo de asimetría y curtosis para potasio
+fBasics::skewness(salinidad$k)
+fBasics::kurtosis(salinidad$k)
 
-
+# Medidas de resumen estadístico para todas las variables
+basicStats(salinidad)
