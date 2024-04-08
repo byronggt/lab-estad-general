@@ -7,6 +7,7 @@
 # Colocar en memoria las bibliotecas a usar
 if(!require(readxl)){install.packages("readxl")}
 if(!require(dplyr)){install.packages("dplyr")}
+if(!require(psych)){install.packages("psych")}
 
 # Abrir la base de datos
 # No olvidar el cambio de directorio de trabajo
@@ -24,3 +25,8 @@ resumen <- sacarosa %>%
             Desviación = sd(ph),
             IQR = IQR(ph))
 resumen
+
+# Cálculo de medidas de resumen estadístico 
+# para pH por categoría de muestra
+
+psych::describeBy(ph,muestra)
